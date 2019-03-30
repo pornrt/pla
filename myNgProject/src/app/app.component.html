@@ -1,46 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <div class="input-group">
-    <div class="input-group-prepend">
-      <button class="btn btn-success" type="button">NAME</button>
-    </div>
-    <input type="text" class="form-control" value="ปลา" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="name">
-  </div>
-  <hr>
-  สวัสดี {{name}}
-  <hr>
-  <h3 class="text-center">รายชื่อ</h3>
+  <h3 class="text-center">WORKSHOP 2 </h3>
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>STUDENT NAME</th>
-        <th>Weight</th>
-        <th>height</th>
-        <th>IBM</th>
-        <th>Result</th>
+        <th>รหัสสินค้า</th>
+        <th>ชื่อสินค้า</th>
+        <th>ราคาสินค้า</th>
+        <th> </th>
+      
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>{{student.studentID}}</td>
-        <td>{{student.name}}</td>
-        <td>{{student.weight}}</td>
-        <td>{{student.height}}</td>
-        <td>{{student.bmi}}</td>
-        <td *ngIf ="student.bmi > 25"> อ้วน</td>
-        <td *ngIf ="student.bmi < 25"> ผอม</td>
-        <td *ngIf ="student.bmi == 25"> สมส่วน</td>
-        </tr>
-        <tr *ngFor="let s of studentlist">
-            <td>{{s.studentID}}</td>
-            <td>{{s.name}}</td>
-            <td>{{s.weight}}</td>
-            <td>{{s.height}}</td>
-            <td>{{s.bmi}}</td>
-            <td *ngIf ="s.bmi > 25"> อ้วนนนนนนนนนน</td>
-            <td *ngIf ="s.bmi < 25"> ผอม</td>
-            <td *ngIf ="s.bmi == 25"> สมส่วน</td>
+        <tr *ngFor="let p of productlist">
+            <td>{{p.pId}}</td>
+            <td>{{p.pName}}</td>
+            <td>{{p.pcost}}</td>
+            <td>
+              <button type="button" class="btn btn-outline-primary">เลือกสินค้า</button>
+
+            </td>
+      
         </tr>
       </tbody>
   </table>
+  <div class="row">
+      <div class="col-6 bg-info">test</div>
+      <div class="col-6 bg-info">test</div>
+
+  </div>
